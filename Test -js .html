@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <title>HTML Demo</title> 
+  <style>
+	div {font-size:50px} 
+	div {font-family: "宋体"} 
+	div {font-weight: normal;}
+	div {color: #F00000}
+  </style> 
+  <script type = "text/javascript" >
+   function showTime() {
+     var curTime = new Date();
+     var year = curTime.getFullYear();
+     var month = curTime.getMonth() + 1;
+     var date = curTime.getDate();
+	 var timePart1 = year + "年" + month + "月" + date ; 
+	 var timePart2 = " " + curTime.toLocaleTimeString();
+     var timeStr = timePart1 + timePart2;	 
+     document.getElementById("mytime").innerText = timeStr;
+	}
+	setInterval("showTime()", 1000); 
+   </script> 
+ </head> 
+ <body> 
+  <div>
+    我使用HTML+CSS+JS,美颜又能显示时间：
+  </div> 
+  <div id="mytime"></div>   
+ </body>
+</html>
